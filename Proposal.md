@@ -19,8 +19,8 @@ As a comic enthusiast our users will be able to call on their favorite hero or v
 
 
 # API's
-Marvel API
-IMDB API
+Marvel API - https://developer.marvel.com/
+IMDB API - http://www.omdbapi.com/
 
 # Breakdown 
 Currently looking into our roles for this project. 
