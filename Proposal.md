@@ -23,4 +23,15 @@ Marvel API (https://developer.marvel.com/)
 OMDB API (http://www.omdbapi.com/)
 
 # Breakdown 
-Currently looking into our roles for this project. 
+
+-Create an HTML layout for the app with search capabilities
+-Create CSS values 
+-Optimize for mobile and desktop
+-Set up access to APIs 
+-Create a search engine that fetches into Character box, Bio box, Appears on box, 
+-Create local storage event for 'Save to line up' button
+-Lock down the chosen characters on Line Up box. 
+-Add Clear Button
+-Add the Jams 
+
+
