@@ -24,3 +24,7 @@ IMDB API - http://www.omdbapi.com/
 
 # Breakdown 
 Currently looking into our roles for this project. 
+
+# Breakdown 
+Contributors: 
+Dora, Manuel, Brandon
