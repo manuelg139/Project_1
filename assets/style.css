@@ -1,0 +1,67 @@
+
+header {
+    background-color: red;
+    line-height: 35px;
+    text-align: center;
+}
+
+
+.main {
+    border: solid black 3px;
+    padding: 5px;
+    margin-top: 50px;
+}
+
+#character {
+
+}
+
+#searchbar{
+    border: solid black 3px;
+    padding: 5px;
+}
+#appearson{
+    border: solid black 3px;
+    padding: 5px;
+}
+
+#saveBtn{
+    border: solid black 3px;
+    padding: 5px;
+}
+
+#lineup{
+    border: solid black 3px;
+    padding: 5px;
+}
+
+#info{
+    border: solid black 3px;
+    padding: 5px;
+}
+
+.lineup{
+    border: solid black 3px;
+    padding: 5px;
+    margin-top: 50px;
+
+}
+
+h1 {
+    background-color: red;
+    line-height: 35px;
+    text-align: center;
+}
+
+.selects{
+    border: solid black 3px;
+    padding: 5px;
+}
+
+
+.info{
+    border: solid black 3px;
+    padding: 5px;
+    margin-top: 50px;
+
+}
