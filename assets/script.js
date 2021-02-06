@@ -22,7 +22,7 @@ $("#searchBtn").on("click", function () {
 });
 
 function getCharacter(QUERY){
-        var marvelURL = "https://gateway.marvel.com:443/v1/public/characters?";
+        var marvelURL = "https://gateway.marvel.com:443/v1/public/characters";
         $.ajax({
             url: marvelURL + QUERY + marvelApiKey,
             method: "GET"
