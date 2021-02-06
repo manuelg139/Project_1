@@ -45,4 +45,3 @@ movieInfo();
 // fetch('https://gateway.marvel.com:443/v1/public/characters?name=Iron%20Man&apikey=8544f15bee458e41b62dad89c68ebf90')
 //       .then(response => response.json())
 //       .then(data => console.log(data));
-https://manuelg139.github.io/Project_1/
