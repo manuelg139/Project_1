@@ -31,7 +31,7 @@ function getCharacter(QUERY){
         .then(function(currentCharacter){
             $("#charName").html(localStorage.getItem('character'))
             $("#charBio").html(currentCharacter.data.results[0].description);
-            console.log(currentCharacter.data.results.description)
+            console.log(JSON.stringify(currentCharacter.data.results.description));
         })
     }
 
@@ -45,3 +45,4 @@ movieInfo();
 // fetch('https://gateway.marvel.com:443/v1/public/characters?name=Iron%20Man&apikey=8544f15bee458e41b62dad89c68ebf90')
 //       .then(response => response.json())
 //       .then(data => console.log(data));
+https://manuelg139.github.io/Project_1/
