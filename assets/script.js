@@ -34,6 +34,7 @@ function getCharacter(QUERY){
             console.log(currentCharacter.data);
             console.log(currentCharacter.results);
             console.log(currentCharacter.data.results);
+            console.log(currentCharacter.data.results[0].description);
         })
     }
 
