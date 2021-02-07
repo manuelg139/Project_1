@@ -43,6 +43,8 @@ function getCharacter(QUERY){
             // console.log(currentCharacter.results);
             // console.log(currentCharacter.data.results);
             // console.log(currentCharacter.data.results[0].description);
+            $("#appearson").html(currentCharacter.data.results[0].comics.items[0].name);
+            console.log($(currentCharacter.data.results[0].comics.items[0].name)
         })
     }
 
