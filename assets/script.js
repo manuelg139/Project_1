@@ -31,7 +31,9 @@ function getCharacter(QUERY){
         .then(function(currentCharacter){
             $("#charName").html(localStorage.getItem('character'))
             $("#charBio").html(currentCharacter.data.results[0].description);
-            console.log(data);
+            console.log(currentCharacter.data);
+            console.log(currentCharacter.results);
+            console.log(currentCharacter.data.results);
         })
     }
 
