@@ -31,6 +31,7 @@ function getCharacter(QUERY){
         .then(function(currentCharacter){
             $("#charName").html(currentCharacter.data.results[0].name)
             $("#charBio").html(currentCharacter.data.results[0].description);
+            $("#charImg").html(currentCharacter.data.results[0].thumbnail.path)
             console.log(currentCharacter.data);
             console.log(currentCharacter.results);
             console.log(currentCharacter.data.results);
