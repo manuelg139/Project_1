@@ -29,15 +29,20 @@ function getCharacter(QUERY){
         })
     
         .then(function(currentCharacter){
+            //grabs character name and displays it on character box
             $("#charName").html(currentCharacter.data.results[0].name)
+            //grabs character bio and displays it on character box - will ONLY show bio IF it's in the marvel API ie Gambit does not have a bio description 
             $("#charBio").html(currentCharacter.data.results[0].description);
+            //created var for icon path from marvel api 
             var iconPath = currentCharacter.data.results[0].thumbnail.path;
+            //var that adds iconpath and sizing for image to display on screen
             var charImg = iconPath + "/standard_fantastic.jpg";
+            //displays image of character standard_fantastic 250x250px
             $("#charImg").html("<img src='" + charImg + "'>")
-            console.log(currentCharacter.data);
-            console.log(currentCharacter.results);
-            console.log(currentCharacter.data.results);
-            console.log(currentCharacter.data.results[0].description);
+            // console.log(currentCharacter.data);
+            // console.log(currentCharacter.results);
+            // console.log(currentCharacter.data.results);
+            // console.log(currentCharacter.data.results[0].description);
         })
     }
 
