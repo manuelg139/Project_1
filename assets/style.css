@@ -3,6 +3,37 @@ header {
     background-color: red;
     line-height: 35px;
     text-align: center;
+    
+}
+
+h1 {
+    background-color: red;
+    line-height: 35px;
+    text-align: center;
+}
+
+p {
+    font-family: 'Roboto Mono', monospace;
+    font: 14px;
+   
+}
+
+
+h2 {
+    background-color: red;
+    line-height: 20px;
+    text-align: center;
+}
+
+#hero-camp{
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+}
+#hero-camp img{
+padding-top: 10px;
+padding-bottom: -2px;
 }
 
 .content{
@@ -18,20 +49,17 @@ header {
     
 }
 
-#menu{
+.menu{
     padding: 5px;
     margin-top: 15px;
     text-align: center;
 
 }
 
-#hero-camp{
-    background-color: black;
-}
 #header-image{
-    position: relative;
-}
+    padding-top: 70px;
 
+}
 
 
 #character {
@@ -52,10 +80,6 @@ header {
     padding: 5px;
 }
 
-#lineup{
-  
-    padding: 5px;
-}
 
 #info{
    
@@ -68,11 +92,6 @@ header {
 
 }
 
-h1 {
-    background-color: red;
-    line-height: 35px;
-    text-align: center;
-}
 
 .selects{
     padding: 5px;
@@ -84,3 +103,39 @@ h1 {
     margin-top: 50px;
 
 }
+
+#youtube-video{
+    margin-right: 5px;
+    width: 45%;
+}
+#youtube-list{
+    width: 55%;
+
+}
+
+article{
+    display: flex;
+    padding: 8px 4px 8px 4px;   
+    transition: transform .2s;
+}
+
+article:hover{
+    border: 2px solid red;
+    background-color: white;
+    -ms-transform: scale(1.15); /* IE 9 */
+  -webkit-transform: scale(1.15); /* Safari 3-8 */
+  transform: scale(1.15); 
+}
+
+.video-desc{
+    width: 100%;
+    margin-left: 10px;
+}
+
+.thumb{
+    width: 25%;
+}
+.description-text {
+    font-size: 12px;
+}
+
