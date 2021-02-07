@@ -5,11 +5,24 @@ header {
     text-align: center;
 }
 
+.content{
+    width: 70% ;
+    margin-left: 200px ;
+
+}
 
 .main {
-    border: solid black 3px;
     padding: 5px;
     margin-top: 50px;
+    text-align: center;
+    
+}
+
+#menu{
+    padding: 5px;
+    margin-top: 15px;
+    text-align: center;
+
 }
 
 #hero-camp{
@@ -26,31 +39,30 @@ header {
 }
 
 #searchbar{
-    border: solid black 3px;
+   
     padding: 5px;
 }
 #appearson{
-    border: solid black 3px;
+
     padding: 5px;
 }
 
 #saveBtn{
-    border: solid black 3px;
+    
     padding: 5px;
 }
 
 #lineup{
-    border: solid black 3px;
+  
     padding: 5px;
 }
 
 #info{
-    border: solid black 3px;
+   
     padding: 5px;
 }
 
 .lineup{
-    border: solid black 3px;
     padding: 5px;
     margin-top: 50px;
 
@@ -63,13 +75,11 @@ h1 {
 }
 
 .selects{
-    border: solid black 3px;
     padding: 5px;
 }
 
 
 .info{
-    border: solid black 3px;
     padding: 5px;
     margin-top: 50px;
 
