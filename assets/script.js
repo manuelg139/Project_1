@@ -45,6 +45,10 @@ function getCharacter(QUERY){
             // console.log(currentCharacter.data.results[0].description);
             $("#appearson").html(currentCharacter.data.results[0].comics.items[0].name);
             console.log(currentCharacter.data.results[0].comics.items[0].name)
+            console.log(currentCharacter.data.results[0].urls.url[0])
+            console.log(currentCharacter.data.results[0].urls.url[1])
+            console.log(currentCharacter.data.results[0].urls.url[2])
+
         })
     }
 
