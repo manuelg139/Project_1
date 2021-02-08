@@ -63,8 +63,8 @@ $("#saveBtn").on("click", function () {
     localStorage.setItem("character", JSON.stringify(character))
     console.log(character)
     for (i = 0; i < 6; i++) {
-        newChar = $(".selects").append(character[i]);
-        $(".selects").append(newChar);
+        newChar = $("selects").append(character[i]);
+        $("selects").append(newChar);
         character = character.slice(0, 6);
     }
 });
