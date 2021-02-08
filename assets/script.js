@@ -49,9 +49,9 @@ function getCharacter(QUERY){
                 + "<br>" + currentCharacter.data.results[0].series.items[2].name 
                 + "<br>" + currentCharacter.data.results[0].series.items[3].name
                 + "<br>" + currentCharacter.data.results[0].series.items[4].name)
-            console.log(currentCharacter.data.results[0].urls[0].url)
-            console.log(currentCharacter.data.results[0].urls[1].url)
-            console.log(currentCharacter.data.results[0].urls[2].url)
+            $("#url1").html(currentCharacter.data.results[0].urls[0].url)
+            $("#url2").html(currentCharacter.data.results[0].urls[1].url)
+            $("#url3").html(currentCharacter.data.results[0].urls[2].url)
             
 
         })
