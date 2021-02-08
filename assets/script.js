@@ -65,7 +65,7 @@ $("#saveBtn").on("click", function () {
     for (i = 0; i < 6; i++) {
         newChar = $(".selects").append(character[i]);
         $(".selects").append(newChar);
-        cities = cities.slice(0, 6);
+        selects = selects.slice(0, 6);
     }
 });
 
