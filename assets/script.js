@@ -56,6 +56,7 @@ function getCharacter(QUERY) {
 }
 
 $("#saveBtn").on("click", function () {
+    var QUERY = $("#search-hero").val().trim();
     getCharacter(QUERY);
     console.log(QUERY)
     character.unshift(QUERY);
