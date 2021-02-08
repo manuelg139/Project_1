@@ -21,14 +21,14 @@ $("#searchBtn").on("click", function () {
     console.log(character)
 });
 
-function getCharacter(QUERY){
-        var marvelURL = "https://gateway.marvel.com:443/v1/public/characters?name=";
-        $.ajax({
-            url: marvelURL + QUERY + marvelApiKey,
-            method: "GET"
-        })
-    
-        .then(function(currentCharacter){
+function getCharacter(QUERY) {
+    var marvelURL = "https://gateway.marvel.com:443/v1/public/characters?name=";
+    $.ajax({
+        url: marvelURL + QUERY + marvelApiKey,
+        method: "GET"
+    })
+
+        .then(function (currentCharacter) {
             //grabs character name and displays it on character box
             $("#charName").html(currentCharacter.data.results[0].name)
             //grabs character bio and displays it on character box - will ONLY show bio IF it's in the marvel API ie Gambit does not have a bio description 
@@ -43,23 +43,36 @@ function getCharacter(QUERY){
             // console.log(currentCharacter.results);
             // console.log(currentCharacter.data.results);
             // console.log(currentCharacter.data.results[0].description);
-            $("#appearson").html(currentCharacter.data.results[0].comics.items[0].name 
-                + "<br>" + currentCharacter.data.results[0].series.items[0].name 
-                + "<br>" + currentCharacter.data.results[0].series.items[1].name 
-                + "<br>" + currentCharacter.data.results[0].series.items[2].name 
+            $("#appearson").html(currentCharacter.data.results[0].comics.items[0].name
+                + "<br>" + currentCharacter.data.results[0].series.items[0].name
+                + "<br>" + currentCharacter.data.results[0].series.items[1].name
+                + "<br>" + currentCharacter.data.results[0].series.items[2].name
                 + "<br>" + currentCharacter.data.results[0].series.items[3].name
                 + "<br>" + currentCharacter.data.results[0].series.items[4].name)
             // console.log(currentCharacter.data.results[0].urls[0].url)
             // console.log(currentCharacter.data.results[0].urls[1].url)
             // console.log(currentCharacter.data.results[0].urls[2].url)
-
         })
-    }
+}
 
-function movieInfo(){
+$("#saveBtn").on("click", function () {
+    getCharacter(QUERY);
+    console.log(QUERY)
+    character.unshift(QUERY);
+    localStorage.setItem("character", JSON.stringify(character))
+    console.log(character)
+    for (i = 0; i < 6; i++) {
+        newChar = $(".selects").append(character[i]);
+        $(".selects").append(newChar);
+        cities = cities.slice(0, 6);
+    }
+});
+
+
+function movieInfo() {
     fetch(omdbApiKey + "&t=batman")
-    .then(response => response.json())
-    .then(data => console.log(data))
+        .then(response => response.json())
+        .then(data => console.log(data))
 }
 movieInfo();
 
