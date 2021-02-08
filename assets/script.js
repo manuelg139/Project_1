@@ -43,12 +43,12 @@ function getCharacter(QUERY){
             // console.log(currentCharacter.results);
             // console.log(currentCharacter.data.results);
             // console.log(currentCharacter.data.results[0].description);
-            $("#appearson").html(currentCharacter.data.results[0].comics.items[0].name);
-            console.log(currentCharacter.data.results[0].series.items[0].name)
-            console.log(currentCharacter.data.results[0].series.items[1].name)
-            console.log(currentCharacter.data.results[0].series.items[2].name)
-            console.log(currentCharacter.data.results[0].series.items[3].name)
-            console.log(currentCharacter.data.results[0].series.items[4].name)
+            $("#appearson").html(currentCharacter.data.results[0].comics.items[0].name 
+                + currentCharacter.data.results[0].series.items[0].name 
+                + currentCharacter.data.results[0].series.items[1].name 
+                + currentCharacter.data.results[0].series.items[2].name 
+                + currentCharacter.data.results[0].series.items[3].name
+                + currentCharacter.data.results[0].series.items[4].name)
             console.log(currentCharacter.data.results[0].urls[0].url)
             console.log(currentCharacter.data.results[0].urls[1].url)
             console.log(currentCharacter.data.results[0].urls[2].url)
