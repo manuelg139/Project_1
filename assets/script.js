@@ -82,7 +82,7 @@ $("#saveBtn").on("click", function () {
         // console.log(charSaveArr[i].image)
         newDiv.append(newImg);
 
-        $("#char-line").appendTo("<img src='" + charImg + "'/>");
+        $("#char-line").html("<img src='" + charImg + "'/>");
 
         // newChar = $(".selects").append(character[i]);
         $(".selects").append(character[i]);
