@@ -5,9 +5,9 @@
 
 $(document).ready(function(){
 
-    var key = 'AIzaSyA9k9iLLPRUTDJMlF4_2rCknRa3LfeV54w';
+    var apiKey = 'AIzaSyA9k9iLLPRUTDJMlF4_2rCknRa3LfeV54w';
     var playlistId = 'PLUUfwPgYNgfys8eSvBnyMWFPbdJcuL-Xm';
-    var URL = 'https://www.googleapis.com/youtube/v3/playlists';
+    var queryURL = 'https://www.googleapis.com/youtube/v3/playlists';
  
     var options = {
         part: 'snippet',
@@ -16,17 +16,25 @@ $(document).ready(function(){
     }
 
     loadVids();
+    
     function loadVids(){
-        $.getJSON(URL, options, function(data){
-            console.log(data);
-            
+      $.ajax({
+        url: queryURL,
+        method: 'GET'
+        })
+        .then(function(reponse){
+          console.log(respponse)
+        })
+       /*  $.getJSON(URL, options, function(data){
+            console.log(data.playlistId);
+ */
             //console log is not working
             // i need to find the parameter for the video ID to embeed on the main video console
             // var id = data.items
        
             // mainVid();
-        }
-        )};
+        
+        };
 /* 
     function mainVid(id){
         $('#youtube-video').html(`
