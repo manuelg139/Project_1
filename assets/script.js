@@ -3,6 +3,8 @@ var userInput = document.querySelector("#search-hero");
 var marvelApiKey = "&apikey=8544f15bee458e41b62dad89c68ebf90";
 var omdbApiKey = "https://www.omdbapi.com/?apikey=4e80b14d";
 var character = JSON.parse(localStorage.getItem('character')) || [];
+var charImg = "";
+var charName = "";
 
 $("#search-hero").keyup(function (event) {
     if (event.keyCode === 13) {
@@ -36,7 +38,8 @@ function getCharacter(QUERY) {
             //created var for icon path from marvel api 
             var iconPath = currentCharacter.data.results[0].thumbnail.path;
             //var that adds iconpath and sizing for image to display on screen
-            var charImg = iconPath + "/standard_fantastic.jpg";
+            charImg = iconPath + "/standard_fantastic.jpg";
+            charName = currentCharacter.data.results[0].name;
             //displays image of character standard_fantastic 250x250px
             $("#charImg").html("<img src='" + charImg + "'>")
             // console.log(currentCharacter.data);
@@ -57,17 +60,27 @@ function getCharacter(QUERY) {
 
 $("#saveBtn").on("click", function () {
     var QUERY = $("#search-hero").val().trim();
+    console.log(charImg)
+    console.log(charName)
+    var charInfo = {
+        name : "",
+        image: "",
+    };
     getCharacter(QUERY);
     console.log(QUERY)
     character.unshift(QUERY);
     localStorage.setItem("character", JSON.stringify(character))
     console.log(character)
     for (i = 0; i < 6; i++) {
-        newChar = $(".selects").append(character[i]);
-        $(".selects").append(QUERY);
-        QUERY = QUERY.slice(0, 6);
-        console.log(character)
-        console.log(newChar)
+        var newDiv = $("<div>");
+        var newImg = $("<img>");
+        newDiv.attr("class", "selects");
+        newImg.attr("src")
+        // newChar = $(".selects").append(character[i]);
+        $(".selects").append(character[i]);
+        // QUERY = QUERY.slice(0, 6);
+        // console.log(character)
+        // console.log(newChar)
     }
 });
 
@@ -82,3 +95,4 @@ movieInfo();
 // fetch('https://gateway.marvel.com:443/v1/public/characters?name=Iron%20Man&apikey=8544f15bee458e41b62dad89c68ebf90')
 //       .then(response => response.json())
 //       .then(data => console.log(data));
+
