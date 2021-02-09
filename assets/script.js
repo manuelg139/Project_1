@@ -95,12 +95,21 @@ $("#saveBtn").on("click", function () {
 });
 
 
-function movieInfo() {
-    fetch(omdbApiKey + "&t=batman")
-        .then(response => response.json())
-        .then(data => console.log(data))
-}
-movieInfo();
+// function movieInfo() {
+//     fetch(omdbApiKey + "&t=batman")
+//         .then(response => response.json())
+//         .then(data => console.log(data))
+// }
+// movieInfo();
+
+$(document).ready(() => {
+  $('#searchForm').on('submit', (e) => {
+    let searchText = $('#searchText').val();
+    getMovies(searchText);
+    e.preventDefault();
+  });
+});
+
 
 // fetch('https://gateway.marvel.com:443/v1/public/characters?name=Iron%20Man&apikey=8544f15bee458e41b62dad89c68ebf90')
 //       .then(response => response.json())
