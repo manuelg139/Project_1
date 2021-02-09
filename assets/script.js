@@ -68,6 +68,7 @@ $("#saveBtn").on("click", function () {
         image: charImg,
     };
     charSaveArr.push(charInfo);
+    console.log(charSaveArr)
     getCharacter(QUERY);
     console.log(QUERY)
     character.unshift(QUERY);
