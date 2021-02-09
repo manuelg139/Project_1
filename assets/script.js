@@ -79,9 +79,9 @@ $("#saveBtn").on("click", function () {
         var newImg = $("<img>");
         newDiv.attr("class", "selects");
         // newImg.attr("<img src=" + charSaveArr[i].image + "'>");
-        console.log(charSaveArr[i].image)
+        // console.log(charSaveArr[i].image)
         newDiv.append(newImg);
-        $("#char-line").html("<img src=" + charImg + "'>");
+        $("#char-line").appendTo("<img src=" + charSaveArr[i].image + "'>");
         // newChar = $(".selects").append(character[i]);
         $(".selects").append(character[i]);
         // QUERY = QUERY.slice(0, 6);
