@@ -86,7 +86,7 @@ $("#saveBtn").on("click", function () {
 
         // newChar = $(".selects").append(character[i]);
         $(".selects").append(character[i]);
-        // QUERY = QUERY.slice(0, 6);
+        charImg = charImg.slice(0, 6);
         // console.log(character)
         // console.log(newChar)
     }
