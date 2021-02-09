@@ -63,8 +63,8 @@ $("#saveBtn").on("click", function () {
     localStorage.setItem("character", JSON.stringify(character))
     console.log(character)
     for (i = 0; i < 6; i++) {
-        newChar = $("selects").append(character[i]);
-        $("selects").append(QUERY);
+        newChar = $(".selects").append(character[i]);
+        $(".selects").append(QUERY);
         QUERY = QUERY.slice(0, 6);
         console.log(character)
         console.log(newChar)
