@@ -5,6 +5,7 @@ var omdbApiKey = "https://www.omdbapi.com/?apikey=4e80b14d";
 var character = JSON.parse(localStorage.getItem('character')) || [];
 var charImg = "";
 var charName = "";
+var charSaveArr = [];
 
 $("#search-hero").keyup(function (event) {
     if (event.keyCode === 13) {
@@ -63,19 +64,21 @@ $("#saveBtn").on("click", function () {
     console.log(charImg)
     console.log(charName)
     var charInfo = {
-        name : "",
-        image: "",
+        name : charName,
+        image: charImg,
     };
+    charSaveArr.push(charInfo);
     getCharacter(QUERY);
     console.log(QUERY)
     character.unshift(QUERY);
-    localStorage.setItem("character", JSON.stringify(character))
+    localStorage.setItem("character", JSON.stringify(charSaveArr));
     console.log(character)
     for (i = 0; i < 6; i++) {
         var newDiv = $("<div>");
         var newImg = $("<img>");
         newDiv.attr("class", "selects");
-        newImg.attr("src")
+        newImg.attr("src", charSaveArr[i].name);
+        newDiv.append(newImg)
         // newChar = $(".selects").append(character[i]);
         $(".selects").append(character[i]);
         // QUERY = QUERY.slice(0, 6);
