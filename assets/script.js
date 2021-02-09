@@ -78,10 +78,10 @@ $("#saveBtn").on("click", function () {
         var newDiv = $("<div>");
         var newImg = $("<img>");
         newDiv.attr("class", "selects");
-        newImg.attr("<img src=" + charSaveArr[i].image + "'>");
+        // newImg.attr("<img src=" + charSaveArr[i].image + "'>");
         console.log(charSaveArr[i].image)
         newDiv.append(newImg);
-        $("#char-line").append("<img src=" + charSaveArr[i].image + "'>");
+        $("#char-line").append("<img src=" + charImg + "'>");
         // newChar = $(".selects").append(character[i]);
         $(".selects").append(character[i]);
         // QUERY = QUERY.slice(0, 6);
@@ -101,4 +101,3 @@ movieInfo();
 // fetch('https://gateway.marvel.com:443/v1/public/characters?name=Iron%20Man&apikey=8544f15bee458e41b62dad89c68ebf90')
 //       .then(response => response.json())
 //       .then(data => console.log(data));
-
