@@ -78,7 +78,7 @@ $("#saveBtn").on("click", function () {
         var newDiv = $("<div>");
         var newImg = $("<img>");
         newDiv.attr("class", "selects");
-        newImg.attr("src", charSaveArr[i].name);
+        newImg.attr("<img src=" + charSaveArr[i].name + "'>");
         newDiv.append(newImg);
         $("#char-line").append(newDiv);
         // newChar = $(".selects").append(character[i]);
