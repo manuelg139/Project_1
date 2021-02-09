@@ -82,7 +82,8 @@ $("#saveBtn").on("click", function () {
         // console.log(charSaveArr[i].image)
         newDiv.append(newImg);
 
-        $("#char-line").html("<img src='" + charSaveArr[i].image + "'/>");
+        // $("#char-line").html("<img src='" + charSaveArr[i].image + "'/>");
+        $("#char-line").append("<img src='" + charSaveArr[i].image + "'/>");
 
         // newChar = $(".selects").append(character[i]);
         $(".selects").append(character[i]);
@@ -90,6 +91,7 @@ $("#saveBtn").on("click", function () {
         // console.log(character)
         // console.log(newChar)
     }
+    $("#search-hero").val("");
 });
 
 
