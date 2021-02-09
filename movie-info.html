@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- Bulma-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+   
+    <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300&display=swap" rel="stylesheet">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="./assets/style.css">
+
+    <!--favicon-->
+    <link rel="shortcut icon" href="./assets/images/iron+man+marvel+super+hero+icon-1320166695193344033.png" type=image/png>
+
+    <title>Avengers Unite</title>
+</head>
+
+<body>
+    <header>
+       
+                <div id="hero-camp">
+                        <img src="./assets/images/hero-camp.png">
+                </div>
+                
+    </header>
+
+
+ 
+    <div class="columns">
+        <div id="movieinfo-list"  class="column" >
+            <section> <H2> MOVIE INFORMATION CARD</H2>  </section> 
+        </br>
+
+        
+        </div>
+               
+    </div>        
+
+
+
+<!-- Modal-->
+<div class="modal" id="movie-modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Modal title</p>
+        <button class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+    THIS IS A MODAALLLLLL
+    
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button">Close</button>
+      </footer>
+    </div>
+  </div>
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="./assets/script.js" type="text/javascript"></script>
+        <script src="./assets/omdbApi.js" type="text/javascript"></script>
+        <script>
+            getMovie();
+        </script>
+</body>
+
+</html>

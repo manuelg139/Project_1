@@ -36,10 +36,13 @@ padding-top: 10px;
 padding-bottom: -2px;
 }
 
+
+@media(min-width:960px){
 .content{
     width: 70% ;
     margin-left: 200px ;
 
+}
 }
 
 .main {
@@ -62,28 +65,21 @@ padding-bottom: -2px;
 }
 
 
-#character {
-
-}
 
 #searchbar{
    
-    padding: 5px;
 }
 #appearson{
 
-    padding: 5px;
 }
 
 #saveBtn{
     
-    padding: 5px;
 }
 
 
 #info{
    
-    padding: 5px;
 }
 
 .lineup{
@@ -94,7 +90,6 @@ padding-bottom: -2px;
 
 
 .selects{
-    padding: 5px;
 }
 
 
@@ -103,6 +98,39 @@ padding-bottom: -2px;
     margin-top: 50px;
 
 }
+
+
+.movie-box{
+    border: 2px solid black;
+    font-size: 16px;
+    width: 325px;
+    margin: 15px 10px 60px 10px;
+    padding: 5px 5px 14px 5px;
+    text-align: center;
+    float: left;
+
+}
+
+.img-thumb{
+    max-height: 350px;
+}
+
+
+#movieinfo-list{
+margin: 120px  35px 25px 160px ;
+max-width: 77%;
+font-size: 20px;
+text-align: center;
+border: 2px solid red;
+background-color: rgb(206, 206, 206);
+}
+
+.info-photo{
+ height: 620px;
+}
+
+
+
 
 #youtube-video{
     margin-right: 5px;
@@ -118,24 +146,13 @@ article{
     padding: 8px 4px 8px 4px;   
     transition: transform .2s;
 }
-
+/* 
 article:hover{
     border: 2px solid red;
     background-color: white;
     -ms-transform: scale(1.15); /* IE 9 */
-  -webkit-transform: scale(1.15); /* Safari 3-8 */
-  transform: scale(1.15); 
+ 
 }
 
-.video-desc{
-    width: 100%;
-    margin-left: 10px;
-}
-
-.thumb{
-    width: 25%;
-}
-.description-text {
-    font-size: 12px;
-}
+ */
 
