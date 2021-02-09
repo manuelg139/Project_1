@@ -17,11 +17,11 @@ $("#search-hero").keyup(function (event) {
 $("#searchBtn").on("click", function () {
     var QUERY = $("#search-hero").val().trim();
     getCharacter(QUERY);
-    console.log(QUERY)
+    // console.log(QUERY)
     $("#search-hero").attr("placeholder", "Enter another hero");
     character.unshift(QUERY);
     localStorage.setItem("character", JSON.stringify(character))
-    console.log(character)
+    // console.log(character)
 });
 
 function getCharacter(QUERY) {
@@ -70,16 +70,17 @@ $("#saveBtn").on("click", function () {
     charSaveArr.push(charInfo);
     console.log(charSaveArr)
     getCharacter(QUERY);
-    console.log(QUERY)
+    // console.log(QUERY)
     character.unshift(QUERY);
     localStorage.setItem("character", JSON.stringify(charSaveArr));
-    console.log(character)
+    // console.log(character)
     for (i = 0; i < 6; i++) {
         var newDiv = $("<div>");
         var newImg = $("<img>");
         newDiv.attr("class", "selects");
         newImg.attr("src", charSaveArr[i].name);
-        newDiv.append(newImg)
+        newDiv.append(newImg);
+        $("#char-line").append(newDiv);
         // newChar = $(".selects").append(character[i]);
         $(".selects").append(character[i]);
         // QUERY = QUERY.slice(0, 6);
