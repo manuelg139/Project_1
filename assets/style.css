@@ -29,6 +29,14 @@ p {
     font-family: GT;
 }
 
+.gifs-flip{
+    max-height: 75px;
+    transform: scaleX(-1);
+}
+
+.gifs{
+    max-height: 75px;
+}
 
 .h2 {
     background-color: rgb(173, 6, 6);
@@ -40,7 +48,9 @@ p {
     font-family: marvel;
 }
 
-
+.box-sizing{
+    box-sizing:border-box;
+}
 
 /* HEADER  IMG*/
 
@@ -270,9 +280,23 @@ article:hover{
 
 
 
+/*footer*/
+#hero-footer{
+    
+background-color: black;
+width: 100%;
+text-align: center;
+}
+
+
+
+
+
+
+
 @media(min-width:960px){
     .content{
-        width: 70% ;
+        width: 75% ;
         margin-left: 200px ;
     
     }
