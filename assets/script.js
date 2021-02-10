@@ -80,7 +80,6 @@ $("#saveBtn").on("click", function () {
     // console.log(character)
     $("#char-line").empty();
     output = "";
-    console.log(index)
     $.each(charSaveArr, (index, lineup) => {
         //output data to append to html   
         output += ` <img src='${lineup.image}'/>`;
