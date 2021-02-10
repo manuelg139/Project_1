@@ -31,9 +31,6 @@ function getCharacter(QUERY) {
         url: marvelURL + QUERY + marvelApiKey,
         method: "GET"
     })
-
-    
-
         .then(function (currentCharacter) {
             //grabs character name and displays it on character box
             $("#charName").html(currentCharacter.data.results[0].name)
@@ -90,10 +87,14 @@ $("#saveBtn").on("click", function () {
     $("#char-line").empty();
     output = "";
     $.each(charSaveArr, (index, lineup) => {
+        console.log(index)
         //output data to append to html   
         output += ` <img src='${lineup.image}'/>`;
-    }); 
+    });
+    if (index < 5){
     //appending to the hmtl container
-    $('#char-line').html(output);
+    $('#char-line').html(output);}
+    else{
+        alert("Excelsior! You have reached the max number of heroes in your lineup!")
+    }
 })
- 
