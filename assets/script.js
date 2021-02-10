@@ -84,13 +84,13 @@ $("#saveBtn").on("click", function () {
 
         // $("#char-line").html("<img src='" + charSaveArr[i].image + "'/>");
         // newChar = $("<img>").append("<img src='" + charImg[i] + "'/>");
-        $("#char-line").append("<img src='" + charSaveArr[0].image + "'/>");
+        $("#char-line").append("<img src='" + charSaveArr[i].image + "'/>");
         // $("#char-line").append(newChar)
         // newChar = newChar.slice(0, 6);
 
         // newChar = $(".selects").append(character[i]);
         // $(".selects").append(character[i]);
-        // charSaveArr = charSaveArr.slice(0, 6);
+        charSaveArr.slice(0, 6);
         // console.log(character)
         // console.log(newChar)
     }
