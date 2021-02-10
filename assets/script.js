@@ -6,7 +6,7 @@ var character = JSON.parse(localStorage.getItem('character')) || [];
 var charImg = "";
 var charName = "";
 var charSaveArr = [];
-//var output = '';
+var output = '';
 
 $("#search-hero").keyup(function (event) {
     if (event.keyCode === 13) {
@@ -77,7 +77,7 @@ $("#saveBtn").on("click", function () {
     // console.log(character)
     $("#char-line").empty();
 
-
+/* 
  for (i = 0; i < charSaveArr.length; i++) {
         var newDiv = $("<div>");
         var newImg = $("<img>");
@@ -94,16 +94,19 @@ $("#saveBtn").on("click", function () {
 
         // newChar = $(".selects").append(character[i]);
         // $(".selects").append(character[i]);
-        charSaveArr = charSaveArr.slice(0, 1);
+        charSaveArr = charSaveArr.slice(index, 1);
         // console.log(character)
         // console.log(newChar)
     }
     $("#search-hero").val("");
 });
- 
+  */
 
-/* 
-        // Manuels loop works but also needs the index fixed
+
+        //loop of the movies array to output the data needed
+        
+
+
         $.each(charSaveArr, (index, lineup) =>{
             
 
@@ -117,7 +120,7 @@ $("#saveBtn").on("click", function () {
 $('#char-line').html(output);
 })
 
- */
+
 
 
 
