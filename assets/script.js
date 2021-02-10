@@ -64,12 +64,12 @@ function getCharacter(QUERY) {
             // console.log(currentCharacter.data.results[0].urls[2].url)
         })
         .catch(function (error) {
-            console/log(error);
+            console / log(error);
             /* $('#showAlert').click(function(){
                 $('#myAlert').simplyAlert({
                     message: "WRONG"
                 })}) */
-          });
+        });
 }
 
 
@@ -99,10 +99,11 @@ $("#saveBtn").on("click", function () {
         //output data to append to html   
         output += ` <img src='${lineup.image}'/>`;
     });
-    if (count < 6){
-    //appending to the hmtl container
-    $('#char-line').html(output);}
-    else{
-        alert("Excelsior! You have reached the max number of heroes in your lineup!")
+    if (count > 6) {
+        alert("Excelsior! You have reached the max number of heroes in your lineup!");
+    }
+    else {
+        //appending to the hmtl container
+        $('#char-line').html(output);
     }
 })
