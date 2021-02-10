@@ -78,13 +78,14 @@ $("#saveBtn").on("click", function () {
     $("#char-line").empty();
     output = "";
     var count = 0;
+    if(count <=6){
     $.each(charSaveArr, (index, lineup) => {
         //output data to append to html   
         output += ` <img src='${lineup.image}'/>`;
     });
     //appending to the hmtl container
-    $('#char-line').html(output);
-    if(count >6){
+    $('#char-line').html(output);}
+    else if(count > 7){
         alert("Excelsior! You've reached your max number of heroes!")
     }
 })
