@@ -99,11 +99,12 @@ $("#saveBtn").on("click", function () {
         //output data to append to html   
         output += ` <img src='${lineup.image}'/>`;
     });
-    if (count > 6) {
+    if (count < 6) {
+        //appending to the hmtl container
+        $('#char-line').html(output);
         alert("Excelsior! You have reached the max number of heroes in your lineup!");
     }
     else {
-        //appending to the hmtl container
-        $('#char-line').html(output);
+        alert("Excelsior! You have reached the max number of heroes in your lineup!");
     }
 })
