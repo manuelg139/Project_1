@@ -6,6 +6,7 @@ var character = JSON.parse(localStorage.getItem('character')) || [];
 var charImg = "";
 var charName = "";
 var charSaveArr = [];
+var output = '';
 
 $("#search-hero").keyup(function (event) {
     if (event.keyCode === 13) {
@@ -103,6 +104,9 @@ $("#saveBtn").on("click", function () {
 
 
         //loop of the movies array to output the data needed
+        
+
+
         $.each(charSaveArr, (index, lineup) =>{
             
 
