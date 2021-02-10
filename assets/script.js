@@ -31,9 +31,6 @@ function getCharacter(QUERY) {
         url: marvelURL + QUERY + marvelApiKey,
         method: "GET"
     })
-
-    
-
         .then(function (currentCharacter) {
             //grabs character name and displays it on character box
             $("#charName").html(currentCharacter.data.results[0].name)
@@ -80,14 +77,18 @@ $("#saveBtn").on("click", function () {
     // console.log(character)
     $("#char-line").empty();
     output = "";
+    if(index < 6){
     $.each(charSaveArr, (index, lineup) => {
         //output data to append to html   
         output += ` <img src='${lineup.image}'/>`;
-    }); 
+    });
     //appending to the hmtl container
-    $('#char-line').html(output);
+    $('#char-line').html(output);}
+    else{
+        alert ("Excelsior!")
+    }
 })
- 
+
 // function movieInfo() {
 //     fetch(omdbApiKey + "&t=batman")
 //         .then(response => response.json())
@@ -96,11 +97,11 @@ $("#saveBtn").on("click", function () {
 // movieInfo();
 
 $(document).ready(() => {
-  $('#searchForm').on('submit', (e) => {
-    let searchText = $('#searchText').val();
-    getMovies(searchText);
-    e.preventDefault();
-  });
+    $('#searchForm').on('submit', (e) => {
+        let searchText = $('#searchText').val();
+        getMovies(searchText);
+        e.preventDefault();
+    });
 });
 
 
