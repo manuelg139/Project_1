@@ -35,7 +35,7 @@ function getCharacter(QUERY) {
             //grabs character name and displays it on character box
             $("#charName").html(currentCharacter.data.results[0].name)
             //grabs character bio and displays it on character box - will ONLY show bio IF it's in the marvel API ie Gambit does not have a bio description 
-            $("#charBio").html(currentCharacter.data.results[0].description);
+            $("#appearson").html(currentCharacter.data.results[0].description);
             //created var for icon path from marvel api 
             var iconPath = currentCharacter.data.results[0].thumbnail.path;
             //var that adds iconpath and sizing for image to display on screen
@@ -47,12 +47,12 @@ function getCharacter(QUERY) {
             // console.log(currentCharacter.results);
             // console.log(currentCharacter.data.results);
             // console.log(currentCharacter.data.results[0].description);
-            $("#appearson").html(currentCharacter.data.results[0].comics.items[0].name
-                + "<br>" + currentCharacter.data.results[0].series.items[0].name
-                + "<br>" + currentCharacter.data.results[0].series.items[1].name
-                + "<br>" + currentCharacter.data.results[0].series.items[2].name
-                + "<br>" + currentCharacter.data.results[0].series.items[3].name
-                + "<br>" + currentCharacter.data.results[0].series.items[4].name)
+            // $("#appearson").html(currentCharacter.data.results[0].comics.items[0].name
+            //     + "<br>" + currentCharacter.data.results[0].series.items[0].name
+            //     + "<br>" + currentCharacter.data.results[0].series.items[1].name
+            //     + "<br>" + currentCharacter.data.results[0].series.items[2].name
+            //     + "<br>" + currentCharacter.data.results[0].series.items[3].name
+            //     + "<br>" + currentCharacter.data.results[0].series.items[4].name)
             // console.log(currentCharacter.data.results[0].urls[0].url)
             // console.log(currentCharacter.data.results[0].urls[1].url)
             // console.log(currentCharacter.data.results[0].urls[2].url)
