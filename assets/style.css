@@ -5,6 +5,10 @@
     font-family: marvel;
 }
 
+@font-face{
+    src: url(./fonts/GT-Pressura-Bold-Italic.ttf);
+    font-family: GT;
+}
 
 header {
     background-color: rgb(173, 6, 6);
@@ -18,11 +22,11 @@ h1 {
     line-height: 35px;
     text-align: center;
 }
-
 p {
-    font-family: 'Roboto Mono', monospace;
-    font: 14px;
-   
+    font: 16px;
+    line-height: 20px;
+    color: rgb(173, 6, 6);
+    font-family: GT;
 }
 
 
@@ -165,13 +169,15 @@ padding-bottom: -2px;
 }
 .instructions{
     height: 100px;
-    border: 2px solid  rgb(173, 6, 6) ;
     width: 100%;
+    text-align: center;
     margin-bottom: 20px;
     margin-top: 25px;
 }
 
-
+#char-line{
+    margin: 15px;
+}
 
 
 
