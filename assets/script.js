@@ -104,6 +104,9 @@ $("#saveBtn").on("click", function () {
         $('#char-line').html(output);
     }
     else {
-        alert("Excelsior! You have reached the max number of heroes in your lineup!");
+        $(".modal-close").click(function() {
+            $("html").addClass("is-clipped");
+            $(target).addClass("is-active");
+         });
     }
 })
