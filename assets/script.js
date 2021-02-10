@@ -32,6 +32,8 @@ function getCharacter(QUERY) {
         method: "GET"
     })
 
+    
+
         .then(function (currentCharacter) {
             //grabs character name and displays it on character box
             $("#charName").html(currentCharacter.data.results[0].name)
@@ -77,6 +79,7 @@ $("#saveBtn").on("click", function () {
     localStorage.setItem("character", JSON.stringify(charSaveArr));
     // console.log(character)
     $("#char-line").empty();
+<<<<<<< HEAD
 
 
 
@@ -112,18 +115,18 @@ $("#saveBtn").on("click", function () {
         $.each(charSaveArr, (index, lineup) =>{
             
 
+=======
+    output = "";
+    $.each(charSaveArr, (index, lineup) => {
+>>>>>>> 41183526bb1ce210278b41d997ef15502bf16175
         //output data to append to html   
-        output += `
-        <img src='${lineup.image}'/>
-    `;
-});  output.slice(0,1)
-
-//appending to the hmtl container
-$('#char-line').html(output);
+        output += ` <img src='${lineup.image}'/>`;
+    }); 
+    //appending to the hmtl container
+    $('#char-line').html(output);
 })
 
  */
-
 
 
 // function movieInfo() {
