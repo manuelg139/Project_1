@@ -6,7 +6,7 @@ var character = JSON.parse(localStorage.getItem('character')) || [];
 var charImg = "";
 var charName = "";
 var charSaveArr = [];
-var output = '';
+//var output = '';
 
 $("#search-hero").keyup(function (event) {
     if (event.keyCode === 13) {
@@ -94,9 +94,7 @@ $("#saveBtn").on("click", function () {
 
         // newChar = $(".selects").append(character[i]);
         // $(".selects").append(character[i]);
-
-        charSaveArr = charSaveArr.slice(index, 1);
-
+        charSaveArr = charSaveArr.slice(0, 1);
         // console.log(character)
         // console.log(newChar)
     }
