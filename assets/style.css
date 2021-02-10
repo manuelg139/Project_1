@@ -12,16 +12,11 @@
 
 header {
     background-color: rgb(173, 6, 6);
-    line-height: 35px;
+    line-height: 55px;
     text-align: center;
     
 }
 
-h1 {
-    background-color: red;
-    line-height: 35px;
-    text-align: center;
-}
 p {
     font: 16px;
     line-height: 20px;
@@ -52,13 +47,15 @@ p {
     box-sizing:border-box;
 }
 
+
+
 /* HEADER  IMG*/
 
 #hero-camp{
     background-color: black;
     width: 100%;
+    line-height: 65px;
     text-align: center;
-    position: fixed;
 }
 #hero-camp img{
 padding-top: 10px;
@@ -66,7 +63,10 @@ padding-bottom: -2px;
 }
 
 #header-image{
-    padding-top: 70px;
+    padding-top: -10px;
+    text-align: center;
+    margin-left: 220px;
+    width: 1200px;
 
 }
 
@@ -198,6 +198,7 @@ padding-bottom: -2px;
 /* Movie list Container CSS */
 #movieSearch{
     text-align: center;
+    margin-top: 55px;
 
 }
 
@@ -205,6 +206,7 @@ padding-bottom: -2px;
 .movie-box{
     border: 2px solid black;
     font-size: 16px;
+    background-color: white;
     width: 325px;
     margin: 15px 10px 60px 20px;
     padding: 5px 5px 14px 5px;
@@ -291,8 +293,43 @@ text-align: center;
 
 
 
+@media(min-width:460px){
+    .content{
+        width: 75% ;
+        margin-left: 60px ;
+    
+    }
+
+#header-image{
+    padding-top: -10px;
+    text-align: center;
+    margin-left: 0px;
+    width: 100%;
+
+}
 
 
+}
+
+
+
+
+
+@media(min-width:760px){
+    .content{
+        width: 75% ;
+        margin-left: 60px ;
+    
+    }
+
+#header-image{
+    padding-top: -10px;
+    text-align: center;
+    margin-left: 0px;
+    width: 100%;
+
+}
+}
 
 
 @media(min-width:960px){
@@ -301,14 +338,11 @@ text-align: center;
         margin-left: 200px ;
     
     }
-}
 
-
-
-@media(min-width:960px){
+    
     #movie-list{
         text-align: center;
-        margin-left: 50px;
+        margin-left: 20px;
     
     }
     }
