@@ -82,8 +82,12 @@ $("#saveBtn").on("click", function () {
         //output data to append to html   
         output += ` <img src='${lineup.image}'/>`;
     });
+    if (index < 5){
     //appending to the hmtl container
-    $('#char-line').html(output);
+    $('#char-line').html(output);}
+    else{
+        alert("Excelsior! You have reached the max number of heroes in your lineup!")
+    }
 })
 
 // function movieInfo() {
