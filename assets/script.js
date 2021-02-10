@@ -77,12 +77,12 @@ $("#saveBtn").on("click", function () {
     // console.log(character)
     $("#char-line").empty();
     output = "";
+    if(count <6){
     var count = 0;
     $.each(charSaveArr, (index, lineup) => {
         //output data to append to html   
         output += ` <img src='${lineup.image}'/>`;
     });
-    if(count <6){
     //appending to the hmtl container
     $('#char-line').html(output);}
     else{
