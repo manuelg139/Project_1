@@ -78,7 +78,7 @@ $("#saveBtn").on("click", function () {
     $("#char-line").empty();
 
 
-  /*   for (i = 0; i < charSaveArr.length; i++) {
+ for (i = 0; i < charSaveArr.length; i++) {
         var newDiv = $("<div>");
         var newImg = $("<img>");
         newDiv.attr("class", "selects");
@@ -94,19 +94,16 @@ $("#saveBtn").on("click", function () {
 
         // newChar = $(".selects").append(character[i]);
         // $(".selects").append(character[i]);
-        charSaveArr = charSaveArr.slice(index, 1);
+        charSaveArr = charSaveArr.slice(0, 1);
         // console.log(character)
         // console.log(newChar)
     }
     $("#search-hero").val("");
 });
- */
+ 
 
-
-        //loop of the movies array to output the data needed
-        
-
-
+/* 
+        // Manuels loop works but also needs the index fixed
         $.each(charSaveArr, (index, lineup) =>{
             
 
@@ -114,13 +111,13 @@ $("#saveBtn").on("click", function () {
         output += `
         <img src='${lineup.image}'/>
     `;
-});  
+});  output.slice(0,1)
 
 //appending to the hmtl container
 $('#char-line').html(output);
 })
 
-
+ */
 
 
 
