@@ -93,7 +93,7 @@ $("#saveBtn").on("click", function () {
         //output data to append to html   
         output += ` <img src='${lineup.image}'/>`;
     });
-    if (count < 5){
+    if (count < 6){
     //appending to the hmtl container
     $('#char-line').html(output);}
     else{
