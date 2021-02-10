@@ -77,17 +77,13 @@ $("#saveBtn").on("click", function () {
     // console.log(character)
     $("#char-line").empty();
     output = "";
-    var count = 0;
-    if(count <=6){
     $.each(charSaveArr, (index, lineup) => {
+        console.log(index)
         //output data to append to html   
         output += ` <img src='${lineup.image}'/>`;
     });
     //appending to the hmtl container
-    $('#char-line').html(output);}
-    else if(count > 7){
-        alert("Excelsior! You've reached your max number of heroes!")
-    }
+    $('#char-line').html(output);
 })
 
 // function movieInfo() {
