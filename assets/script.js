@@ -1,5 +1,6 @@
 var saveBtn = document.querySelector("#saveBtn");
 var userInput = document.querySelector("#search-hero");
+var clearBtn = document.querySelector("#clearBtn");
 var marvelApiKey = "&apikey=8544f15bee458e41b62dad89c68ebf90";
 var omdbApiKey = "https://www.omdbapi.com/?apikey=4e80b14d";
 var character = JSON.parse(localStorage.getItem('character')) || [];
@@ -23,6 +24,11 @@ $("#searchBtn").on("click", function () {
     character.unshift(QUERY);
     localStorage.setItem("character", JSON.stringify(character))
     // console.log(character)
+});
+
+
+$("#clearBtn").on("click", function () {
+    localStorage.removeItem("character", JSON.stringify(character))
 });
 
 function getCharacter(QUERY) {
