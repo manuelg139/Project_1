@@ -64,7 +64,7 @@ $("#saveBtn").on("click", function () {
     console.log(charImg)
     console.log(charName)
     var charInfo = {
-        name : charName,
+        // name : charName,
         image: charImg,
     };
     charSaveArr.push(charInfo);
@@ -74,7 +74,8 @@ $("#saveBtn").on("click", function () {
     character.unshift(QUERY);
     localStorage.setItem("character", JSON.stringify(charSaveArr));
     // console.log(character)
-    for (i = 0; i < 6; i++) {
+    $("#char-line").empty();
+    for (i = 0; i < charSaveArr.length; i++) {
         var newDiv = $("<div>");
         var newImg = $("<img>");
         newDiv.attr("class", "selects");
@@ -83,10 +84,10 @@ $("#saveBtn").on("click", function () {
         newDiv.append(newImg);
 
         // $("#char-line").html("<img src='" + charSaveArr[i].image + "'/>");
-        // newChar = $("<img>").append("<img src='" + charImg[i] + "'/>");
-        $("#char-line").append("<img src='" + charSaveArr[i].image + "'/>");
-        // $("#char-line").append(newChar)
-        // newChar = newChar.slice(0, 6);
+        newChar = $("<img>").append("<img src='" + charSaveArr[i] + "'/>");
+        // $("#char-line").append("<img src='" + charSaveArr[i].image + "'/>");
+        $("#char-line").append(newChar)
+        newChar = newChar.slice(0, 6);
 
         // newChar = $(".selects").append(character[i]);
         // $(".selects").append(character[i]);
