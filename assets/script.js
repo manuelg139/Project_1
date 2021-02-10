@@ -102,7 +102,6 @@ $("#saveBtn").on("click", function () {
     if (count < 6) {
         //appending to the hmtl container
         $('#char-line').html(output);
-        alert("Excelsior! You have reached the max number of heroes in your lineup!");
     }
     else {
         alert("Excelsior! You have reached the max number of heroes in your lineup!");
