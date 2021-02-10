@@ -30,12 +30,12 @@ p {
 }
 
 .gifs-flip{
-    max-height: 75px;
+    height: 75px;
     transform: scaleX(-1);
 }
 
 .gifs{
-    max-height: 75px;
+    height: 75px;
 }
 
 .h2 {
@@ -161,6 +161,7 @@ padding-bottom: -2px;
 
 #appearson{
     padding-top: 25px;
+ 
    
 }
 
