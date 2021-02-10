@@ -75,7 +75,9 @@ $("#saveBtn").on("click", function () {
     localStorage.setItem("character", JSON.stringify(charSaveArr));
     // console.log(character)
     $("#char-line").empty();
-    for (i = 0; i < charSaveArr.length; i++) {
+
+
+  /*   for (i = 0; i < charSaveArr.length; i++) {
         var newDiv = $("<div>");
         var newImg = $("<img>");
         newDiv.attr("class", "selects");
@@ -97,6 +99,25 @@ $("#saveBtn").on("click", function () {
     }
     $("#search-hero").val("");
 });
+ */
+
+
+        //loop of the movies array to output the data needed
+        $.each(charSaveArr, (index, lineup) =>{
+            
+
+        //output data to append to html   
+        output += `
+        <img src='${lineup.image}'/>
+    `;
+});  
+
+//appending to the hmtl container
+$('#char-line').html(output);
+})
+
+
+
 
 
 // function movieInfo() {
