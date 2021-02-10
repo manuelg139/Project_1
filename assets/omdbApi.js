@@ -1,51 +1,3 @@
-/* 
-$(document).ready(() => {
-    // $('#searchForm').on('keyup' , (e) => {
-    //     console.log("Checked")
-    //     console.log(e)
-    //     if(e.code === "Enter"){
-    //     e.preventDefault();
-    //     let searchText = $('#searchText').val();
-    //     console.log(searchText)
-    //     getMovies(searchText);
-    // }
-  
-    // })
-  
-  $(".submitBtn").on("click", function(e){
-  e.preventDefault();
-  console.log("Clicked")
-        let searchText = $('#searchText').val();
-        console.log(searchText)
-        getMovies(searchText);
-  })
-  function getMovies(searchText){
-    $.ajax({
-        type: "GET",
-        url:'http://www.omdbapi.com/?apikey=4e80b14d&t=' + searchText
-    })
-
-
-
-
-    .then((response) => {
-        console.log(response);
-        // let movies = response.data.Search;
-        // let output = '';
-
-
-        // $.each(movies, (index, movie) =>{
-        //     output += `
-           
-        //     `;
-        // });  
-    })
-    .catch((err) => {
-        console.log(err);
-    })
-  }
-  }); */
-
 
 
 
@@ -61,13 +13,14 @@ $(document).ready(() => {
 function getMovies(searchText){
     //accessing the API via axios API Key link
     
+    
     $.ajax({
         type: "GET",
         url:'http://www.omdbapi.com/?apikey=4e80b14d&t=' + searchText
     })
 
     .then((response) => {
-        console.log(response);
+        console.log(data);
         //perimeters needed to acccess the movie posters 
         var movies = response.data;
         var output = '';
@@ -78,12 +31,11 @@ function getMovies(searchText){
 
         //output data to append to html   
             output += `
-                <section class="movie-box">
-                    <img src="https://image.tmdb.org/t/p/w500${movie.Poster_path}" class="img-thumb">
+                <section >
+                    <img src="https://image.tmdb.org/t/p/w500${movie.Poster}" class="img-thumb">
                     <h5>${movie.Title}</h5>
                     <P>THIS IS APPENDED</P>
                     <a onclick="movieSelected('${movie.imdbID}')" class="is-danger" href="#">Movie Details</a>
-                    
                 </section>
             `;
         });  

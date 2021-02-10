@@ -60,6 +60,7 @@ function getCharacter(QUERY) {
         })
 }
 
+
 $("#saveBtn").on("click", function () {
     var QUERY = $("#search-hero").val().trim();
     console.log(charImg)
@@ -77,7 +78,8 @@ $("#saveBtn").on("click", function () {
     // console.log(character)
     $("#char-line").empty();
 
-/* 
+
+
  for (i = 0; i < charSaveArr.length; i++) {
         var newDiv = $("<div>");
         var newImg = $("<img>");
@@ -94,17 +96,17 @@ $("#saveBtn").on("click", function () {
 
         // newChar = $(".selects").append(character[i]);
         // $(".selects").append(character[i]);
-        charSaveArr = charSaveArr.slice(index, 1);
+        charSaveArr = charSaveArr.slice(0, 1);
         // console.log(character)
         // console.log(newChar)
     }
     $("#search-hero").val("");
 });
-  */
+ 
 
 
         //loop of the movies array to output the data needed
-        
+        /* 
 
 
         $.each(charSaveArr, (index, lineup) =>{
@@ -120,7 +122,7 @@ $("#saveBtn").on("click", function () {
 $('#char-line').html(output);
 })
 
-
+ */
 
 
 
