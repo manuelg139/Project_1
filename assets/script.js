@@ -91,6 +91,7 @@ $("#saveBtn").on("click", function () {
 
         // newChar = $(".selects").append(character[i]);
         // $(".selects").append(character[i]);
+        index = charSaveArr[i];
         charSaveArr = charSaveArr.slice(index, 1);
         // console.log(character)
         // console.log(newChar)
