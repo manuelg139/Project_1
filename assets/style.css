@@ -1,6 +1,13 @@
 
+
+@font-face{
+    src: url(./fonts/AvengeroRegular-zvgl.ttf);
+    font-family: marvel;
+}
+
+
 header {
-    background-color: red;
+    background-color:rgb(173, 6, 6);
     line-height: 35px;
     text-align: center;
     
@@ -19,11 +26,26 @@ p {
 }
 
 
-h2 {
-    background-color: red;
-    line-height: 20px;
+.h2 {
+    background-color: rgb(173, 6, 6);
+    line-height: 40px;
+    font-size: 30px;
     text-align: center;
+    color: rgb(255, 255, 255);
+    padding-top: 6px;
+    font-family: marvel;
 }
+
+
+
+/* HEADER  IMG*/
+@media(min-width:960px){
+    .content{
+        width: 70% ;
+        margin-left: 200px ;
+    
+    }
+    }
 
 #hero-camp{
     background-color: black;
@@ -36,15 +58,18 @@ padding-top: 10px;
 padding-bottom: -2px;
 }
 
-
-@media(min-width:960px){
-.content{
-    width: 70% ;
-    margin-left: 200px ;
+#header-image{
+    padding-top: 70px;
 
 }
-}
 
+
+
+
+
+
+
+/* Searcg Container CSS */
 .main {
     padding: 5px;
     margin-top: 50px;
@@ -59,52 +84,126 @@ padding-bottom: -2px;
 
 }
 
-#header-image{
-    padding-top: 70px;
-
-}
-
-
 
 #searchbar{
-   
-}
-#appearson{
-
-}
-
-#saveBtn{
+    text-align: center;
+    padding-top: 7px;
+    max-width: 100%;
+    margin: 10px 0px 3px 0px ;
     
 }
 
 
-#info{
+
+.search-button{
+    border: 3px solid  rgb(173, 6, 6) ;
+    color: rgb(173, 6, 6);
+    line-height: 25px;
+    font-size: 18px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    padding-top: 6px;
+    font-family: marvel;
+    margin-top: 5px;
+    width: 100%;
+
+}
+
+
+.button:hover{
+    border: 3px solid  rgb(173, 6, 6) ;
+    background-color: rgb(173, 6, 6);
+    color: rgb(255, 255, 255);
+   
+ 
+}
+
+
+#character{
+    height: 450px;
+
+}
+#charName{
+    color: rgb(173, 6, 6);
+    line-height: 30px;
+    font-size: 22px;
+    text-align: center;
+    padding-top: 6px;
+    font-family: marvel;
+
+}
+
+.button{
+    border: 3px solid  rgb(173, 6, 6) ;
+    color: rgb(173, 6, 6);
+    line-height: 25px;
+    font-size: 18px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    padding-top: 8px;
+    font-family: marvel;
+    margin-top: 5px;
+    width: 100%;
+
+}
+
+#saveBtn{
+    width: 99%;
+    margin-left: 5px;
+}
+
+#appearson{
+    padding-top: 25px;
    
 }
 
+
+
+
+
+/* Line Up Container CSS */
+
+
+}
 .lineup{
     padding: 5px;
     margin-top: 50px;
 
 }
-
-
-.selects{
+.instructions{
+    height: 100px;
+    border: 2px solid  rgb(173, 6, 6) ;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 25px;
 }
 
 
-.info{
-    padding: 5px;
-    margin-top: 50px;
+
+
+
+
+
+
+/* Movie list Container CSS */
+#movieSearch{
+    text-align: center;
 
 }
+@media(min-width:960px){
+    #movie-list{
+        text-align: center;
+        margin-left: 50px;
+    
+    }
+    }
 
 
 .movie-box{
     border: 2px solid black;
     font-size: 16px;
     width: 325px;
-    margin: 15px 10px 60px 10px;
+    margin: 15px 10px 60px 20px;
     padding: 5px 5px 14px 5px;
     text-align: center;
     float: left;
@@ -131,7 +230,7 @@ background-color: rgb(206, 206, 206);
 
 
 
-
+/* 
 #youtube-video{
     margin-right: 5px;
     width: 45%;
@@ -146,10 +245,31 @@ article{
     padding: 8px 4px 8px 4px;   
     transition: transform .2s;
 }
+ */
+
 /* 
 article:hover{
     border: 2px solid red;
     background-color: white;
     -ms-transform: scale(1.15); /* IE 9 */
  
+}
+
+
+
+*Footer*/
+.info{
+    padding: 5px;
+    margin-top: 50px;
+
+}
+
+
+.legal{
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    font-family: marvel;
+    line-height: 25px;
+    text-align: center;
 }
