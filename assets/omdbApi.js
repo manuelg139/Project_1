@@ -1,53 +1,64 @@
 
 
-
 $(document).ready(() => {
+
+
     //giving an action to the searchFrom via searchTest Value
-    $('#searchForm').on('submit' , (e) => {
-        var searchText = $('#searchText').val();
-        getMovies(searchText);
+    $("#searchBtn").on("click", function(e){
         e.preventDefault();
+        console.log("Clicked")
+                let searchText = $('#search-hero').val();
+                console.log(searchText)
+                getMovies(searchText);
     })
+    
 });
 
 function getMovies(searchText){
     //accessing the API via axios API Key link
     
+    var output = '';
     
     $.ajax({
         type: "GET",
-        url:'http://www.omdbapi.com/?apikey=4e80b14d&t=' + searchText
+        url:'https://api.themoviedb.org/3/search/movie?api_key=98325a9d3ed3ec225e41ccc4d360c817&language=en-US&query=' + searchText
+        
     })
 
     .then((response) => {
-        console.log(data);
+  
+       console.log(response)
+       console.log(response.results)
+
+       var movies = response.results;
+       var output = '';
+
         //perimeters needed to acccess the movie posters 
-        var movies = response.data;
-        var output = '';
 
-
+    
         //loop of the movies array to output the data needed
         $.each(movies, (index, movie) =>{
 
-        //output data to append to html   
+            //output data to append to html   
             output += `
-                <section >
-                    <img src="https://image.tmdb.org/t/p/w500${movie.Poster}" class="img-thumb">
-                    <h5>${movie.Title}</h5>
-                    <P>THIS IS APPENDED</P>
-                    <a onclick="movieSelected('${movie.imdbID}')" class="is-danger" href="#">Movie Details</a>
+                <section class="movie-box">
+                <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" class="img-thumb">
+                    <h5>${movie.title}</h5>
+                    <a onclick="movieSelected('${movie.id}')" class="is-danger" href="#">Movie Details</a>
                 </section>
             `;
-        });  
+  
+        })
 
-        //appending to the hmtl container
-        $('#movie-list').html(output);
+      //appending to the hmtl container
+      $('#movie-list').html(output);
     })
 
-    .catch(function (err) {
-      console.log(err);
+    .catch(function (error) {
+      console.log(error);
     });
 }
+
 
 
 /* 
@@ -71,6 +82,7 @@ function moduleActive(){
 
 } */
 
+
 //fuction activated for the More Info Button
 function movieSelected(id){
     //temporary session storage for the movei selected
@@ -83,21 +95,16 @@ function movieSelected(id){
   //rendering the information needed for the movie tab 
   function getMovie(){
     var movieId = sessionStorage.getItem('movieId');
-
-
-
     // Make a request for a user with a given ID
-    //axios.get("https://api.themoviedb.org/3/movie/" + movieId + "?api_key=98325a9d3ed3ec225e41ccc4d360c817")
-     
-    
     $.ajax({
         type: "GET",
-        url:'http://www.omdbapi.com/?apikey=4e80b14d&t=' + movieId
+        url:"https://api.themoviedb.org/3/movie/" + movieId + "?api_key=98325a9d3ed3ec225e41ccc4d360c817"
+        
     })
-    
+
     .then(function (response) {
-      let movie = response.data;
-      console.log(movie);
+      let movie = response;
+      console.log(response);
       let output = `
             <div class="columns" id="info-box">
             <div  id="movie-info" class="column" >
@@ -130,3 +137,4 @@ function movieSelected(id){
         console.log(error);
       });
   }
+  
