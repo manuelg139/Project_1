@@ -28,7 +28,7 @@ $("#searchBtn").on("click", function () {
 
 
 $("#clearBtn").on("click", function () {
-    localStorage.removeItem("character", JSON.stringify(character))
+    $("char-line").empty()
 });
 
 function getCharacter(QUERY) {
