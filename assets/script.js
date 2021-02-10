@@ -76,9 +76,10 @@ $("#saveBtn").on("click", function () {
     localStorage.setItem("character", JSON.stringify(charSaveArr));
     // console.log(character)
     $("#char-line").empty();
+    output = "";
     $.each(charSaveArr, (index, lineup) => {
         //output data to append to html   
-        return ` <img src='${lineup.image}'/>`;
+        output += ` <img src='${lineup.image}'/>`;
     }); 
     //appending to the hmtl container
     $('#char-line').html(output);
