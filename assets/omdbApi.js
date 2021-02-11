@@ -31,8 +31,8 @@ function getMovies(searchText){
        console.log(response.results)
 
        var movies = response.results;
-       var output = '';
-
+    
+ 
         //perimeters needed to acccess the movie posters 
 
     
@@ -61,26 +61,11 @@ function getMovies(searchText){
 
 
 
-/* 
-//function for the 
-function movieSelected(id){
-    //store selection on session storage temporarely
-    sessionStorage.setItem('movieId', id);
-    // send it to the module activate the function
-    moduleActive();
-    //    window.location = '';
-    return false;
-  }
 
-//activating the module fucntion
-function moduleActive(){
 
-    //Module//
-   var movieMdl = document.querySelector('#movie-modal'); 
-    //activate the modal
-    $('movieMdl').attr("class", "is-active");
 
-} */
+
+
 
 
 //fuction activated for the More Info Button
@@ -110,9 +95,11 @@ function movieSelected(id){
             <div  id="movie-info" class="column" >
                 <article class="video-item">
                     <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" class="info-photo">  <section class="video-desc">
-                        <h2>${movie.title}</h2>
+                        <h2 class="h2">${movie.title}</h2>
+
                         </br>
                     </br>
+
                         <ul class="list-group">
                             <li class="list-group-item"><strong>Genre:</strong> ${movie.genres[0].name}, ${movie.genres[1].name}</li>
                             <li class="list-group-item"><strong>Released:</strong> ${movie.release_date}</li>
@@ -121,11 +108,15 @@ function movieSelected(id){
                             <li class="list-group-item"><strong>Production Companies:</strong> ${movie.production_companies[0].name} min.</li>
                             </ul>
                         </br></br>
-                        <h2>Plot</h3>
+                        <h2 class="h2">Plot</h2>
+                        <ul class="list-group">
+                        <li class="list-group-item">
                             ${movie.overview}
+                            </li>
+                        </ul>
                             <hr>
-                            <button href="http://imdb.com/title/${movie.imdb_id}" target="_blank" class="is-danger">View IMDB</button>
-                            <button href="index.html" class="is-danger" >Go Back To Search</button>
+                            <button class="button" href="http://imdb.com/title/${movie.imdb_id}" target="_blank" class="is-danger">View IMDB</button>
+                            <button class="button" href="./index.html" class="is-danger" >Go Back To Search</button>
                     </section>
                 </article>
             
@@ -137,4 +128,44 @@ function movieSelected(id){
         console.log(error);
       });
   }
-  
+
+
+
+
+
+// mODAL TEST //
+
+
+/* 
+$("#modalBtn").click(function(){
+    $("#modaltest").addClass("is-active");
+  });
+
+  $("#closeBtn").click(function() {
+    $("#modal").removeClass("is-active");
+ });
+
+Í
+
+ */
+/* 
+function movieSelected(id){
+    //store selection on session storage temporarely
+    sessionStorage.setItem('movieId', id);
+    // send it to the module activate the function
+    moduleActive();
+        
+      };
+    return false;
+  }
+
+
+
+
+//activating the module fucntion
+function moduleActive(){
+
+    $("#modaltest").addClass("is-active");
+
+}  */
+

@@ -24,6 +24,7 @@ $("#searchBtn").on("click", function () {
     character.unshift(QUERY);
     localStorage.setItem("character", JSON.stringify(character))
     // console.log(character)
+    
 });
 
 

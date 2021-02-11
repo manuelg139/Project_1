@@ -10,6 +10,11 @@
     font-family: GT;
 }
 
+@font-face{
+    src: url(./fonts/GT-Pressura-Light.otf);
+    font-family: GTL;
+}
+
 header {
     background-color: rgb(173, 6, 6);
     line-height: 55px;
@@ -166,13 +171,16 @@ padding-bottom: -2px;
 }
 
 
+.active{
+    display: block;
 
+}
 
 
 /* Line Up Container CSS */
 
 
-}
+
 .lineup{
     padding: 5px;
     margin-top: 50px;
@@ -214,6 +222,13 @@ padding-bottom: -2px;
     float: left;
 
 }
+
+.list-group{
+    font-family: GTL;
+
+}
+
+
 
 .img-thumb{
     max-height: 350px;
