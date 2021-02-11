@@ -103,16 +103,16 @@ $("#saveBtn").on("click", function () {
         //appending to the hmtl container
         $('#char-line').html(output);
     }
-    else {
-        $(".modal-button").click(function() {
-            var target = $(this).data("target");
-            $("html").addClass("is-clipped");
-            $(target).addClass("is-active");
-         });
+    // else {
+    //     $(".modal-button").click(function() {
+    //         var target = $(this).data("target");
+    //         $("html").addClass("is-clipped");
+    //         $(target).addClass("is-active");
+    //      });
          
-         $(".modal-close").click(function() {
-            $("html").removeClass("is-clipped");
-            $(this).parent().removeClass("is-active");
-        })
-    }
+    //      $(".modal-close").click(function() {
+    //         $("html").removeClass("is-clipped");
+    //         $(this).parent().removeClass("is-active");
+    //     })
+    // }
 })
