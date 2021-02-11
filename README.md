@@ -14,7 +14,9 @@ If the user searches for a hero not found in the Marvel API (ie She-Hulk, Ant-Ma
 HTML, CSS, JavaScript and Bulma were used for the application.
 
 Screenshot of functioning website.
-<img src ="" width ="200">
-
+<img src ="https://user-images.githubusercontent.com/70343136/107592493-be9a0080-6bd2-11eb-9bad-e203fec39de4.png" width ="200">
+<img src ="https://user-images.githubusercontent.com/70343136/107592495-bf329700-6bd2-11eb-9a07-4beb3fd19859.png" width ="200">
+<img src ="https://user-images.githubusercontent.com/70343136/107592496-bfcb2d80-6bd2-11eb-8eed-e1cedce81bff.png" width ="200">
+<img src ="https://user-images.githubusercontent.com/70343136/107592498-c0fc5a80-6bd2-11eb-970c-0c0507b685cd.png" width ="200">
 
 Link of deployed site: https://manuelg139.github.io/Project_1/
